@@ -1,13 +1,11 @@
 import java.util.Arrays;
 
 public class Datum implements Comparable<Datum>{
-
     int den;
     int mesic;
     int rok;
 
     public Datum(int den, int mesic, int rok) {
-
         this.den = den;
         this.mesic = mesic;
         this.rok = rok;
@@ -15,17 +13,11 @@ public class Datum implements Comparable<Datum>{
 
     @Override
     public String toString() {
-
-        return "Datum{" +
-                "den=" + den +
-                ", mesic=" + mesic +
-                ", rok=" + rok +
-                '}';
+        return den + ". " + mesic + ". " + rok;
     }
 
     @Override
     public int compareTo(Datum o) {
-
         if(rok<o.rok){
             return -1;
         }
@@ -36,7 +28,6 @@ public class Datum implements Comparable<Datum>{
     }
 
     public static void main(String[] args) {
-
         Datum[] arr = {
                 new Datum(25,11,2022),
                 new Datum(31,12,2005),
